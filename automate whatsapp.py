@@ -1,6 +1,5 @@
 import pywhatkit
 
-
 def value(num1,num2,num3,num4):
     t=[num3,num4]
     p=t[0]
