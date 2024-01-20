@@ -15,6 +15,7 @@
 # value(mob,mes,tim,tim1)
 import pywhatkit
 from datetime import datetime, timedelta
+import time  # Add this import statement
 
 def send_message_with_delay(num1, num2, delay_seconds):
     j = '+91'
@@ -36,3 +37,5 @@ mes = input("Enter Your Message: ")
 delay_seconds = 10
 
 send_message_with_delay(mob, mes, delay_seconds)
+
+#7030503537
