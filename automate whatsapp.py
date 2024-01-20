@@ -13,14 +13,21 @@
 # tim1=int(input("Enter Time(in MINUTE):"))
 
 # value(mob,mes,tim,tim1)
-
 import pywhatkit
-import time
+from datetime import datetime, timedelta
 
 def send_message_with_delay(num1, num2, delay_seconds):
     j = '+91'
+    
+    # Calculate the time to send the message (current time + delay)
+    send_time = datetime.now() + timedelta(seconds=delay_seconds)
+    time_hour, time_min = send_time.hour, send_time.minute
+    
+    # Wait for the specified delay
     time.sleep(delay_seconds)
-    pywhatkit.sendwhatmsg(j + num1, num2)
+    
+    # Send the message
+    pywhatkit.sendwhatmsg(j + num1, num2, time_hour, time_min)
 
 mob = input("Enter Number to Send Message: ")
 mes = input("Enter Your Message: ")
